@@ -1,6 +1,4 @@
-================================================================================
 OVERVIEW
-================================================================================
 
 A comprehensive deep learning pipeline for multi-class and binary classification 
 of knee osteoarthritis from X-ray images using transfer learning, GPU 
@@ -19,9 +17,8 @@ Key capabilities:
 - Comprehensive evaluation metrics (accuracy, F1-score, confusion matrices)
 
 
-================================================================================
 FEATURES
-================================================================================
+
 
 Classification Tasks:
   • 5-Class Multi-class: Normal, Doubtful, Mild, Moderate, Severe
@@ -41,9 +38,7 @@ Key Technologies:
   • GPU Memory Management - Adaptive memory allocation and cleanup
 
 
-================================================================================
 DEPENDENCIES
-================================================================================
 
 Required Libraries:
 
@@ -55,9 +50,7 @@ Required Libraries:
   pathlib (standard library)
 
 
-================================================================================
 INSTALLATION
-================================================================================
 
 Clone the repository and install dependencies:
 
@@ -66,9 +59,8 @@ Clone the repository and install dependencies:
   $ pip install -r requirements.txt
 
 
-================================================================================
 CONFIGURATION
-================================================================================
+
 
 The project uses a Config class that can be customized for different training 
 scenarios. Key parameters include:
@@ -95,9 +87,8 @@ Edit the Config class in the script to customize these settings:
   config.OUTPUT_DIR = "path/to/outputs"
 
 
-================================================================================
 DATASET STRUCTURE
-================================================================================
+
 
 The project expects X-ray images organized in a hierarchical directory 
 structure with train/val/test splits. Each split contains subdirectories for 
@@ -121,9 +112,9 @@ Expected directory format:
   - Support for multi-channel (RGB) X-ray images
 
 
-================================================================================
+
 USAGE
-================================================================================
+
 
 Run the complete training and evaluation pipeline:
 
@@ -143,9 +134,9 @@ The script performs the following steps:
 
 Expected execution output:
 
-  ================================================================================
+
   Knee Osteoarthritis Classification - Deep Learning & XAI
-  ================================================================================
+  
   ✓ GPU Memory Optimization Enabled
   ✓ Batch Size: 32 (EfficientNetB7 uses micro-batch 2)
   ✓ Base models frozen: True
@@ -167,9 +158,9 @@ Expected execution output:
   Accuracy: 0.8750
 
 
-================================================================================
+
 OUTPUT FILES
-================================================================================
+
 
 The project generates trained models, visualizations, and performance metrics 
 in the outputs directory:
@@ -193,9 +184,9 @@ outputs/
 └── gradcam_EfficientNetB7.png
 
 
-================================================================================
+
 KEY FEATURES EXPLAINED
-================================================================================
+
 
 GPU Memory Optimization
   The project implements several GPU optimization techniques to handle large 
@@ -237,9 +228,9 @@ Transfer Learning with ImageNet
   • Improves generalization on limited datasets
 
 
-================================================================================
+
 EVALUATION METRICS
-================================================================================
+
 
 Accuracy
   Percentage of correct predictions out of total predictions. Calculated as:
@@ -265,9 +256,9 @@ The confusion matrix helps identify which classes are most frequently
 confused with each other.
 
 
-================================================================================
+
 ADVANCED FEATURES
-================================================================================
+
 
 Mixed Precision Training
   Uses lower precision (float16) for faster computation with reduced memory:
@@ -298,9 +289,9 @@ Parallel Data Loading
   • Automatic tuning via AUTOTUNE parameter
 
 
-================================================================================
+
 RESEARCH & APPLICATIONS
-================================================================================
+
 
 Medical Diagnosis
   Automated knee osteoarthritis grading from X-ray images to assist in:
@@ -337,16 +328,16 @@ Performance Benchmarking
   • Guides architecture selection for similar tasks
 
 
-================================================================================
+
 SAMPLE OUTPUT
-================================================================================
+
 
 When executed, the script produces detailed console output showing training 
 progress, validation metrics, and final performance summaries:
 
-================================================================================
+
 MULTI-CLASS RESULTS
-================================================================================
+
 
 Model               Accuracy     Loss         F1-Score
 --------            --------     ----         --------
@@ -356,7 +347,7 @@ VGG16               0.7850       0.5934       0.7642
 
 
 BINARY CLASSIFICATION BEST RESULTS PER SUBSET
-================================================================================
+
 
 subset_1 (Classes 0 vs 1):
   Best Model: EfficientNetB7
@@ -379,9 +370,9 @@ subset_4 (Classes 0 vs 4):
   F1-Score: 0.9167
 
 
-================================================================================
+
 IMPLEMENTATION NOTES
-================================================================================
+
 
 ⚠️ Important Considerations:
 
@@ -417,9 +408,9 @@ IMPLEMENTATION NOTES
      converting to ONNX or TensorFlow Lite for deployment.
 
 
-================================================================================
+
 PROJECT STRUCTURE
-================================================================================
+
 
 The main script includes the following key components:
 
@@ -434,9 +425,9 @@ The main script includes the following key components:
   • GPU Memory Management - Cleanup and optimization routines
 
 
-================================================================================
+
 TROUBLESHOOTING
-================================================================================
+
 
 Common Issues and Solutions:
 
@@ -456,9 +447,9 @@ Common Issues and Solutions:
   Solution: Check GPU support for float16; script will fall back gracefully
 
 
-================================================================================
+
 FUTURE ENHANCEMENTS
-================================================================================
+
 
 Potential improvements and extensions:
 
